@@ -27,14 +27,17 @@ class varnish (
     replace => $replace_vcl,
   }
 
-  file { $varnish::params::sysconfig_file:
-    ensure  => 'present',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => template("${module_name}/${varnish::params::sysconfig_template}"),
-    notify  => Service['varnish'],
-    require => Package['varnish'],
+  if($varnish::params::sysconfig_file!=undef)
+  {
+    file { $varnish::params::sysconfig_file:
+      ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => template("${module_name}/${varnish::params::sysconfig_template}"),
+      notify  => Service['varnish'],
+      require => Package['varnish'],
+    }
   }
 
   service { 'varnish':
