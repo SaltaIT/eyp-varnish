@@ -4,9 +4,9 @@
   "author": "eyp",
   "summary": "manages varnish service using an external vcl (filebucket)",
   "license": "Apache-2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "source": "https://github.com/NTTCom-MS/eyp-varnish",
+  "project_page": "https://github.com/NTTCom-MS/eyp-varnish",
+  "issues_url": "https://github.com/NTTCom-MS/eyp-varnish/issues",
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"}
   ],
@@ -14,6 +14,12 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [ "14.04" ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.8.0"
     }
   ]
 }
