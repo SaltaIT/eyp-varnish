@@ -1,6 +1,6 @@
 {
   "name": "eyp-varnish",
-  "version": "0.1.2",
+  "version": "1.0.2",
   "author": "Jordi Prats",
   "summary": "manages varnish service using an external vcl (filebucket)",
   "license": "Apache-2.0",
